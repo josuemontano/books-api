@@ -12,6 +12,7 @@ class Book(Base):
     id = Column(UUIDType, primary_key=True)
     title = Column(String(100), nullable=False, index=True)
     description = Column(String(255))
+    isbn13 = Column(String(13))
     author_id = Column(UUIDType, ForeignKey("authors.id"), nullable=False)
 
     author = relationship(Author)
