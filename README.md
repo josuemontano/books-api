@@ -32,3 +32,11 @@ curl --request POST \
   --header 'Content-Type: application/json' \
   --data '{"query":"query { health }"}'
 ```
+
+## Generate GraphQL schema
+
+Strawberry can generate the GraphQL schema with this command:
+
+```bash
+env $(cat .env) strawberry export-schema api.graphql:schema > schema.graphql
+```
