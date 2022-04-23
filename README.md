@@ -35,11 +35,11 @@ curl --request POST \
 
 ## Table of Contents
 
-- [Generate GraphQL schema](#generate-graphql-schema)
+- [Export the GraphQL schema](#export-the-graphql-schema)
 
-### Generate GraphQL schema
+### Export the GraphQL schema
 
-Strawberry can generate the GraphQL schema with this command:
+You can export the schema of the GraphQL API. It will be described in the GraphQL schema definition language (SDL).
 
 ```bash
 env $(cat .env) strawberry export-schema api.graphql:schema > schema.graphql
