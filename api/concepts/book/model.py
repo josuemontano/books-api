@@ -1,10 +1,9 @@
+from api.concepts.author import Author
+from api.concepts.publisher import Publisher
+from api.helpers.db import Base
 from sqlalchemy import Column, ForeignKey, String
 from sqlalchemy.orm import relationship
 from sqlalchemy_utils import UUIDType
-
-from ..helpers.db import Base
-from .author import Author
-from .publisher import Publisher
 
 
 class Book(Base):

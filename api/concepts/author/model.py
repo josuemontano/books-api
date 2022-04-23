@@ -1,7 +1,6 @@
+from api.helpers.db import Base
 from sqlalchemy import Column, String
 from sqlalchemy_utils import UUIDType
-
-from ..helpers.db import Base
 
 
 class Author(Base):
