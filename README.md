@@ -8,12 +8,18 @@ Example [FastAPI](https://fastapi.tiangolo.com) app. It features:
 
 ## Quick start
 
+Install Python 3.9 and [Poetry](https://python-poetry.org/docs/#installation). Then:
+
 ```bash
+# Install dependencies
 poetry install
+
+# Start the server
+poetry shell
 uvicorn api.main:app --reload
 ```
 
-Then make a request to the API:
+Now you can make requests to the API:
 
 ```bash
 curl --request POST \
