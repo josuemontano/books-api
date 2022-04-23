@@ -1,0 +1,39 @@
+type Author {
+  name: String!
+}
+
+type Book {
+  id: String!
+  title: String!
+  description: String
+  isbn13: String
+  author: Author!
+  publisher: Publisher!
+}
+
+type BookConnection {
+  totalCount: Int!
+  pageInfo: PageInfo!
+  edges: [BookEdge!]!
+}
+
+type BookEdge {
+  node: Book!
+  cursor: String!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type Publisher {
+  name: String!
+}
+
+type Query {
+  health: String!
+  books(first: Int! = 50, after: String): BookConnection!
+}
