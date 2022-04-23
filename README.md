@@ -1,6 +1,6 @@
 # Books API
 
-Example [FastAPI](https://fastapi.tiangolo.com) app. It features:
+This is a [FastAPI](https://fastapi.tiangolo.com) example app. It features:
 
 - GraphQL API powered by [strawberry](https://strawberry.rocks)
 - [SQLAlchemy](https://www.sqlalchemy.org)
