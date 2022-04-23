@@ -10,5 +10,5 @@ Example [FastAPI](https://fastapi.tiangolo.com) app. It features:
 
 ```bash
 poetry install
-uvicorn main:app --reload
+uvicorn api.main:app --reload
 ```
