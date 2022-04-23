@@ -14,8 +14,13 @@ Install Python 3.9 and [Poetry](https://python-poetry.org/docs/#installation). T
 # Install dependencies
 poetry install
 
-# Start the server
+# Spawn a shell within the virtual environment
 poetry shell
+
+# Run database migrations
+alembic upgrade head
+
+# Start the server
 uvicorn api.main:app --reload
 ```
 
