@@ -18,7 +18,7 @@ class Book:
     def from_db_model(cls, instance):
         """Adapt this method with logic to map your orm instance to a strawberry decorated class"""
         return cls(
-            id=str(instance.id),
+            id=instance.id,
             title=instance.title,
             isbn13=instance.isbn13,
             description=instance.description,

@@ -9,7 +9,7 @@ from sqlalchemy_utils import UUIDType
 class Book(Base):
     __tablename__ = "books"
 
-    id = Column(UUIDType, primary_key=True)
+    id = Column(UUIDType(binary=False), primary_key=True)
     title = Column(String(100), nullable=False, index=True)
     description = Column(String(255))
     isbn13 = Column(String(13))
