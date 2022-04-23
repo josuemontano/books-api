@@ -16,7 +16,6 @@ psycopg2 = "^2.9.3"
 alembic = "^1.7.7"
 pendulum = "^2.1.2"
 SQLAlchemy-Utils = "^0.38.2"
-pytest = "^7.1.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
