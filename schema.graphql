@@ -35,5 +35,9 @@ type Publisher {
 
 type Query {
   health: String!
-  books(first: Int! = 50, after: String): BookConnection!
+  books(first: Int! = 50, after: String = null, before: String = null): BookConnection!
+}
+
+type Subscription {
+  pi(precision: Int = 10): Float!
 }
