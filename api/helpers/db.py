@@ -6,7 +6,8 @@ from sqlalchemy.orm import sessionmaker
 
 db_url = os.getenv("DATABASE_URL")
 if db_url is None:
-    raise RuntimeError("No database configured")
+    raise RuntimeError("DATABSE_URL environment variable is not set")
+
 engine = create_engine(db_url)
 SessionFactory = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
