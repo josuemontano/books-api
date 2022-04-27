@@ -22,7 +22,7 @@ poetry shell
 alembic upgrade head
 
 # Start the server
-uvicorn api.main:app --reload
+uvicorn api.main:app --reload --host 0.0.0.0
 ```
 
 Now you can make requests to the API:
