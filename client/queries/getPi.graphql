@@ -1,0 +1,3 @@
+subscription getPi($precision: Int) {
+  pi(precision: $precision)
+}

@@ -1,0 +1,17 @@
+query getAllBooks($first: Int) {
+  books(first: $first) {
+    totalCount
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    edges {
+      cursor
+      node {
+        title
+      }
+    }
+  }
+}

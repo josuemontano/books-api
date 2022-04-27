@@ -1,0 +1,37 @@
+{
+  "name": "books-api",
+  "version": "1.0.0",
+  "source": "client/index.html",
+  "browserslist": "last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "codegen": "graphql-codegen --config codegen.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josuemontano/books-api.git"
+  },
+  "author": "Josue Montano <josuemontanoa@gmail.com>",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/josuemontano/books-api/issues"
+  },
+  "homepage": "https://github.com/josuemontano/books-api#readme",
+  "dependencies": {
+    "graphql": "^16.4.0",
+    "graphql-request": "4.3.0-next.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typescript": "^2.4.8",
+    "@graphql-codegen/typescript-graphql-request": "^4.4.5",
+    "@graphql-codegen/typescript-operations": "^2.3.5",
+    "@graphql-codegen/typescript-react-apollo": "3.2.11",
+    "@types/react": "^18.0.7",
+    "parcel": "^2.5.0"
+  }
+}
