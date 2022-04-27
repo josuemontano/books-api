@@ -6,8 +6,9 @@ This is a [FastAPI](https://fastapi.tiangolo.com) example app. It features:
 - [SQLAlchemy](https://www.sqlalchemy.org)
 - [Alembic](https://alembic.sqlalchemy.org/en/latest) migrations
 - GraphQL subscriptions for realtime updates
+- [React](https://reactjs.org) client
 
-## Quick start
+## Quick Start
 
 Install Python 3.9 and [Poetry](https://python-poetry.org/docs/#installation). Then:
 
