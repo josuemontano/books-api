@@ -5,6 +5,7 @@ This is a [FastAPI](https://fastapi.tiangolo.com) example app. It features:
 - GraphQL API powered by [strawberry](https://strawberry.rocks)
 - [SQLAlchemy](https://www.sqlalchemy.org)
 - [Alembic](https://alembic.sqlalchemy.org/en/latest) migrations
+- GraphQL subscriptions for realtime updates
 
 ## Quick start
 
@@ -35,7 +36,17 @@ curl --request POST \
 
 ## Table of Contents
 
+- [System requirements](#system-requirements)
 - [Export the GraphQL schema](#export-the-graphql-schema)
+
+### System requirements
+
+- Python 3.9+
+- PostgreSQL 12+
+- Redis 5+
+
+Make sure the `REDIS_URL` environment variable is pointing to your Redis server and the `DATABASE_URL` one is pointing
+to your PostgreSQL database.
 
 ### Export the GraphQL schema
 
