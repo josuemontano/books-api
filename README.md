@@ -8,6 +8,8 @@ This is a [FastAPI](https://fastapi.tiangolo.com) example app. It features:
 - GraphQL subscriptions for realtime updates
 - [React](https://reactjs.org) client
 
+![screenshot](/public/screenshot.png?raw=true)
+
 ## Quick Start
 
 Install Python 3.9 and [Poetry](https://python-poetry.org/docs/#installation). Then:
