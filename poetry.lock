@@ -206,6 +206,18 @@ python-versions = ">=3.5.0"
 test = ["Cython (>=0.29.24,<0.30.0)"]
 
 [[package]]
+name = "huey"
+version = "2.4.3"
+description = "huey, a little task queue"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+backends = ["redis (>=3.0.0)"]
+redis = ["redis (>=3.0.0)"]
+
+[[package]]
 name = "idna"
 version = "3.3"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -645,7 +657,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "d5401c0f4ee1324d1afc8d32742c269bb8ff0d1f0e4675927de002d41eb3ffcb"
+content-hash = "671d2a72ecd58cb0f195033dca5dc708ccdaeafa34fc8bb5711856ccc08106cb"
 
 [metadata.files]
 aioredis = [
@@ -816,6 +828,9 @@ httptools = [
     {file = "httptools-0.4.0-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:645373c070080e632480a3d251d892cb795be3d3a15f86975d0f1aca56fd230d"},
     {file = "httptools-0.4.0-cp39-cp39-win_amd64.whl", hash = "sha256:34d2903dd2a3dd85d33705b6fde40bf91fc44411661283763fd0746723963c83"},
     {file = "httptools-0.4.0.tar.gz", hash = "sha256:2c9a930c378b3d15d6b695fb95ebcff81a7395b4f9775c4f10a076beb0b2c1ff"},
+]
+huey = [
+    {file = "huey-2.4.3.tar.gz", hash = "sha256:4fa2f6055d581778c3bcf93fc8c9ce87aecc2a345d5ff35bd955da152c02ef37"},
 ]
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},

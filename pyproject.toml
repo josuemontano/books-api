@@ -18,6 +18,7 @@ pendulum = "^2.1.2"
 SQLAlchemy-Utils = "^0.38.2"
 aioredis = "^2.0.1"
 redis = "^4.2.2"
+huey = "^2.4.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
