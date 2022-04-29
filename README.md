@@ -65,11 +65,13 @@ env $(cat .env) strawberry export-schema api.graphql:schema > schema.graphql
 
 ### Task queue
 
-The task queue is powered by [Huey](https://huey.readthedocs.io/en/latest/), backed by Redis. It will run a periodic task to calculate the value of Pi using Leibniz's series and will publish the result of each iteration to Redis. You can get these values in realtime subscribing to the `pi` [GraphQL subscription](https://www.apollographql.com/docs/react/data/subscriptions/) of this API.
+The task queue is powered by [Huey](https://huey.readthedocs.io/en/latest/), backed by Redis.
 
 ```bash
 poetry run huey_consumer.py api.queue.huey
 ```
+
+There's a periodic task to calculate the value of Pi using the Gregory-Leibniz's series and will publish the result of each iteration to Redis. You can get these values in realtime subscribing to the `pi` [GraphQL subscription](https://www.apollographql.com/docs/react/data/subscriptions/) of this API.
 
 ### Client UI
 
