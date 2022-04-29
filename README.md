@@ -6,6 +6,7 @@ This is a [FastAPI](https://fastapi.tiangolo.com) example app. It features:
 - [SQLAlchemy](https://www.sqlalchemy.org)
 - [Alembic](https://alembic.sqlalchemy.org/en/latest) migrations
 - GraphQL subscriptions for realtime updates
+- A task queue powered by [Huey](https://huey.readthedocs.io/en/latest)
 - A client UI powered by [React](https://reactjs.org)
 
 ![screenshot](/public/screenshot.png?raw=true)
@@ -41,6 +42,7 @@ curl --request POST \
 
 - [System requirements](#system-requirements)
 - [Export the GraphQL schema](#export-the-graphql-schema)
+- [Task queue](#task-queue)
 - [Client UI](#client-ui)
 
 ### System requirements
@@ -59,6 +61,14 @@ You can export the schema of the GraphQL API. It will be described in the GraphQ
 
 ```bash
 env $(cat .env) strawberry export-schema api.graphql:schema > schema.graphql
+```
+
+### Task queue
+
+The task queue is powered by [Huey](https://huey.readthedocs.io/en/latest/), backed by Redis. It will run a periodic task to calculate the value of Pi using Leibniz's series and will publish the result of each iteration to Redis. You can get these values in realtime subscribing to the `pi` [GraphQL subscription](https://www.apollographql.com/docs/react/data/subscriptions/) of this API.
+
+```bash
+poetry run huey_consumer.py api.queue.huey
 ```
 
 ### Client UI
