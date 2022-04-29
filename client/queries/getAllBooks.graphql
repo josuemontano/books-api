@@ -10,7 +10,16 @@ query getAllBooks($first: Int) {
     edges {
       cursor
       node {
+        id
         title
+        description
+        isbn13
+        author {
+          name
+        }
+        publisher {
+          name
+        }
       }
     }
   }

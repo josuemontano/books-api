@@ -76,7 +76,7 @@ export type GetAllBooksQueryVariables = Exact<{
 }>;
 
 
-export type GetAllBooksQuery = { books: { totalCount: number, pageInfo: { hasNextPage: boolean, hasPreviousPage: boolean, startCursor?: string | null, endCursor?: string | null }, edges: Array<{ cursor: string, node: { title: string } }> } };
+export type GetAllBooksQuery = { books: { totalCount: number, pageInfo: { hasNextPage: boolean, hasPreviousPage: boolean, startCursor?: string | null, endCursor?: string | null }, edges: Array<{ cursor: string, node: { id: string, title: string, description?: string | null, isbn13?: string | null, author: { name: string }, publisher: { name: string } } }> } };
 
 export type GetPiSubscriptionVariables = Exact<{
   precision?: InputMaybe<Scalars['Int']>;
@@ -99,7 +99,16 @@ export const GetAllBooksDocument = gql`
     edges {
       cursor
       node {
+        id
         title
+        description
+        isbn13
+        author {
+          name
+        }
+        publisher {
+          name
+        }
       }
     }
   }
