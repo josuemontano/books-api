@@ -6,7 +6,7 @@ This is a [FastAPI](https://fastapi.tiangolo.com) example app. It features:
 - [SQLAlchemy](https://www.sqlalchemy.org)
 - [Alembic](https://alembic.sqlalchemy.org/en/latest) migrations
 - GraphQL subscriptions for realtime updates
-- [React](https://reactjs.org) client
+- A client UI powered by [React](https://reactjs.org)
 
 ![screenshot](/public/screenshot.png?raw=true)
 
@@ -41,12 +41,14 @@ curl --request POST \
 
 - [System requirements](#system-requirements)
 - [Export the GraphQL schema](#export-the-graphql-schema)
+- [Client UI](#client-ui)
 
 ### System requirements
 
 - Python 3.9+
 - PostgreSQL 12+
 - Redis 5+
+- Node 16+ (only required for the UI)
 
 Make sure the `REDIS_URL` environment variable is pointing to your Redis server and the `DATABASE_URL` one is pointing
 to your PostgreSQL database.
@@ -58,3 +60,18 @@ You can export the schema of the GraphQL API. It will be described in the GraphQ
 ```bash
 env $(cat .env) strawberry export-schema api.graphql:schema > schema.graphql
 ```
+
+### Client UI
+
+This repo contains a simple UI that you can use to test the API. It is powered by [React](https://reactjs.org),
+[Tailwind](https://tailwindcss.com) and [Parcel](https://parceljs.org).
+
+```bash
+# Install dependencies
+npm install
+
+# Start the dev server
+npm start
+```
+
+Then open http://localhost:1234 in your browser.
