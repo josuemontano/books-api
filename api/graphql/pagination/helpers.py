@@ -10,4 +10,4 @@ def generate_cursor(identifier: str):
 
 
 def decode_cursor(cursor: str):
-    base64.b64decode(cursor).decode()
+    return base64.b64decode(cursor).decode()
